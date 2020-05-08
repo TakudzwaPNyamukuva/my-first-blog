@@ -1,0 +1,82 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #000;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+h1 {
+	font-size: 30px;
+}
+h1,
+h2,
+p {
+	margin: 20px 0;
+}
+h1 a,
+h2 a {
+	color: #2a2350;
+}
+.container {
+	width: 80%;
+	margin: auto;
+}
+/* --------------------------------------------------------------NAV-------------------------------------------------------------- */
+.logo {
+	font-size: 40px;
+	font-weight: 700;
+	color: #2a2350;
+}
+
+.nav-bar {
+	display: flex;
+	justify-content: center;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 0;
+	border-bottom: rgb(12, 12, 12) 1px;
+}
+
+.main-nav li {
+	display: inline-block;
+	margin-right: 30px;
+	color: #fff;
+}
+
+.main-nav a {
+	color: #4d4d4d;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.main-nav a:hover {
+	color: #2a2350;
+}
+
+.nav-menu a {
+	color: #000;
+}
+
+.login-btn {
+	color: #fff;
+	background: #2a2350;
+	padding: 10px 25px;
+	border-radius: 50px;
+}
+
+.login-btn:hover {
+	opacity: 0.9;
+	color: #000;
+}

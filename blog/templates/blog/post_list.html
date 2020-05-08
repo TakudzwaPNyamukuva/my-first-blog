@@ -1,17 +1,54 @@
+{% load static %}
 <html>
 	<head>
 		<title>Django blog</title>
+		<!-- <link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		/> -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+			integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="{% static 'css/blog.css' %}" />
 	</head>
 	<body>
-		<div>
-			<h1><a href="/">Django Blog</a></h1>
+		<nav>
+			<div class="container nav-bar">
+				<a href="#">
+					<p class="logo">
+						<strong>BLOG</strong>
+					</p>
+				</a>
+
+				<ul class="main-nav">
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">ABOUT</a></li>
+					<li><a href="#">CONTACT</a></li>
+				</ul>
+
+				<a class="login-btn" href="">LOGIN</a>
+
+				<ul class="nav-menu">
+					<li>
+						<a href="#"><i class="fas fa-search"></i></a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="container">
+			<div>
+				<h1><a href="/">DJANGO BLOG</a></h1>
+			</div>
+			{% for post in posts %}
+			<div>
+				<p>published: {{ post.published_date }}</p>
+				<h2><a href="">{{ post.title }}</a></h2>
+				<p>{{ post.text|linebreaksbr }}</p>
+			</div>
+			{% endfor %}
 		</div>
-		{% for post in posts %}
-		<div>
-			<p>published: {{ post.published_date }}</p>
-			<h2><a href="">{{ post.title }}</a></h2>
-			<p>{{ post.text|linebreaksbr }}</p>
-		</div>
-		{% endfor %}
 	</body>
 </html>
