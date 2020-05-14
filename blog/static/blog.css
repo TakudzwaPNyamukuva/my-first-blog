@@ -11,10 +11,16 @@ body {
 	color: #000;
 }
 
+.heading {
+	text-align: center;
+	padding: 50px 0;
+}
+
 .showCase {
 	background: url('/static/bac 2.png') no-repeat center center/cover;
 	width: 100%;
-	height: 100vh;
+	/* height: 150vh; */
+	padding-bottom: 40px;
 }
 
 ul {
@@ -24,9 +30,10 @@ ul {
 a {
 	text-decoration: none;
 }
-h1 {
-	font-size: 30px;
+.heading h1 {
+	font-size: 60px;
 	font-weight: 700;
+	color: fff;
 }
 h2 {
 	font-weight: 500;
@@ -106,4 +113,78 @@ h2 a {
 .login-btn:hover {
 	opacity: 0.9;
 	color: #fff;
+}
+
+.post-container {
+	width: 50%;
+}
+
+/* Footer Styles */
+.site-footer {
+	background-color: #fff;
+	padding: 50px 0;
+}
+
+.site-footer p {
+	color: #2e2e2e;
+	font-size: 16px;
+}
+
+.site-footer a {
+	color: #2e2e2e;
+}
+
+.site-footer h4 {
+	font-size: 25px;
+	margin-bottom: 20px;
+}
+
+.contact-info {
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-items {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.contact-items .fas {
+	margin-right: 10px;
+	color: #ee2346;
+}
+
+.footer-items {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 30px;
+	justify-content: center;
+	width: 100%;
+}
+
+.footer-items a {
+	margin-bottom: 20px;
+}
+
+.social-links .fas {
+	color: #ee2346;
+	font-size: 20px;
+}
+
+.social-links .fab {
+	color: #ee2346;
+	font-size: 30px;
+}
+
+.social-links a {
+	margin-right: 10px;
+}
+
+.footer-container {
+	background: #eeeeee;
+	width: 80%;
+	margin: auto;
+	border-radius: 10px;
+	padding: 50px 0;
 }
