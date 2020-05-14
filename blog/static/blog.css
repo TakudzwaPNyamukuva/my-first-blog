@@ -37,6 +37,7 @@ a {
 }
 h2 {
 	font-weight: 500;
+	color: #fff;
 }
 h1,
 h2,
@@ -117,6 +118,10 @@ h2 a {
 
 .post-container {
 	width: 50%;
+}
+
+.post-container h2 {
+	color: #ee2346;
 }
 
 /* Footer Styles */
