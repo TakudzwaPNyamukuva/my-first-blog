@@ -19,40 +19,42 @@
 		<link rel="stylesheet" href="{% static 'blog.css' %}" />
 	</head>
 	<body>
-		<div class="container">
-			<nav>
-				<div class="nav-bar">
-					<a href="#">
-						<p class="logo">
-							<strong>UNFILTERED.</strong>
-						</p>
-					</a>
+		<div class="showCase">
+			<div class="container">
+				<nav>
+					<div class="nav-bar">
+						<a href="#">
+							<p class="logo">
+								<strong>UNFILTERED.</strong>
+							</p>
+						</a>
 
-					<ul class="main-nav">
-						<li><a href="#">About</a></li>
-						<li><a href="#">Contact</a></li>
-					</ul>
+						<ul class="main-nav">
+							<li><a href="#">About</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
 
-					<a class="login-btn" href="">LOGIN</a>
+						<a class="login-btn" href="">LOGIN</a>
 
-					<ul class="nav-menu">
-						<li>
-							<a href="#"><i class="fas fa-search"></i></a>
-						</li>
-					</ul>
+						<ul class="nav-menu">
+							<li>
+								<a href="#"><i class="fas fa-search"></i></a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+
+				<div>
+					<h1><a href="/">Django Blog</a></h1>
 				</div>
-			</nav>
-
-			<div>
-				<h1><a href="/">Django Blog</a></h1>
+				{% for post in posts %}
+				<div class="posts">
+					<p>published: {{ post.published_date }}</p>
+					<h2><a href="">{{ post.title }}</a></h2>
+					<p>{{ post.text|linebreaksbr }}</p>
+				</div>
+				{% endfor %}
 			</div>
-			{% for post in posts %}
-			<div class="posts">
-				<p>published: {{ post.published_date }}</p>
-				<h2><a href="">{{ post.title }}</a></h2>
-				<p>{{ post.text|linebreaksbr }}</p>
-			</div>
-			{% endfor %}
 		</div>
 	</body>
 </html>
